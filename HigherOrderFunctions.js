@@ -1,32 +1,32 @@
 // Without Higher Order function, CallBack Function and Modularity.............
-const radius = [3, 1, 2, 4];
+// const radius = [3, 1, 2, 4];
 
-const calculateArea = function (arr) {
-  const output = arr.map((item, i) => {
-    return Math.PI * arr[i] * arr[i];
-  });
-  return output;
-};
+// const calculateArea = function (arr) {
+//   const output = arr.map((item, i) => {
+//     return Math.PI * arr[i] * arr[i];
+//   });
+//   return output;
+// };
 
-console.log(calculateArea(radius));
+// console.log(calculateArea(radius));
 
-const caluculateCircumference = function (arr) {
-  const output = arr.map((item, i) => {
-    return 2 * Math.PI * arr[i];
-  });
-  return output;
-};
+// const caluculateCircumference = function (arr) {
+//   const output = arr.map((item, i) => {
+//     return 2 * Math.PI * arr[i];
+//   });
+//   return output;
+// };
 
-console.log(caluculateCircumference(radius));
+// console.log(caluculateCircumference(radius));
 
-const caluculateDiameter = function (arr) {
-  const output = arr.map((item, i) => {
-    return 2 * arr[i];
-  });
-  return output;
-};
+// const caluculateDiameter = function (arr) {
+//   const output = arr.map((item, i) => {
+//     return 2 * arr[i];
+//   });
+//   return output;
+// };
 
-console.log(caluculateDiameter(radius));
+// console.log(caluculateDiameter(radius));
 
 // Using Higher Order Fucntion and Callback function, to make code More Modular,Readable,Resuable and Scalalble................
 // const radius = [3, 1, 2, 4];
