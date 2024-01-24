@@ -112,28 +112,28 @@
 // Non-Primitive Data Types are Mutable by Default, They follow Shallow Copy Concept
 
 // Mutability........................
-let myObject1 = {
-    name: "Harvinder",
-    age: 32,
-}
+// let myObject1 = {
+//     name: "Harvinder",
+//     age: 32,
+// }
 
-let myObject2 = myObject1 //Doing Shallow Copy......
-myObject2.age = 25
+// let myObject2 = myObject1 //Doing Shallow Copy......
+// myObject2.age = 25
 
-console.log(myObject1)
-console.log(myObject2)
+// console.log(myObject1)
+// console.log(myObject2)
 
 // Immutability.......................
-let myObject3 = {
-    name: "Harvinder",
-    age: 35,
-}
+// let myObject3 = {
+//     name: "Harvinder",
+//     age: 35,
+// }
 
-let myObject4 = {...myObject2} //Doing Deep Copy
-myObject4.age = 65
+// let myObject4 = {...myObject2} //Doing Deep Copy.....
+// myObject4.age = 65
 
-console.log(myObject3)
-console.log(myObject4)
+// console.log(myObject3)
+// console.log(myObject4)
 
 
 
