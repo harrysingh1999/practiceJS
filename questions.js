@@ -39,23 +39,47 @@
 // }
 
 // Q3. Analyze the given output and provide the same output by using given variables.................
-let sbstr = "And"
-let x  = ["tom and Jerry", "wonderland", "hello and world", "And again it's a beautiful day"];
+// let sbstr = "And"
+// let x  = ["tom and Jerry", "wonderland", "hello and world", "And again it's a beautiful day"];
 
 // output:
 // ["And again it's a beautiful day", "hello and world", "tom and Jerry"]
 
 // const solution = (x, substr) => {
 //     let arr = x.filter(str => {
-//         const splittedArr = str.split(" "); 
+//         const splittedArr = str.split(" ");
 //         let isFound = false;
 //         splittedArr.forEach(el => {
 //             if(el.toLowerCase() === sbstr.toLowerCase()) isFound = true;
 //         })
-//         return isFound;     
+//         return isFound;
 //     });
 //     arr.sort();
 //     return arr;
 // }
 // const ans = solution(x, sbstr);
 // console.log(ans);
+
+// Q4. DOM manipulation when user Setting the password, Display the strength of password......................
+
+let password = document.querySelector("#password");
+let message = document.querySelector("#strengthIndicator");
+
+const checkPasswordStrength = (e) => {
+  let passcode = e.target.value;
+  let specialCharacters = ["@", "#", "%", "&", "$", "*", "!"];
+  let result = false;
+  for (let char of specialCharacters) {
+    if (passcode.includes(char)) result = true;
+  }
+
+  if (passcode.length > 12 && result) {
+    return (message.innerHTML = "Very Strong Password");
+  } else if (passcode.length > 10) {
+    return (message.innerHTML = "Strong Password");
+  } else {
+    return (message.innerHTML = "Weak Password");
+  }
+};
+
+password.addEventListener("input", (e) => checkPasswordStrength(e));
