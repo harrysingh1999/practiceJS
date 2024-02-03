@@ -62,24 +62,81 @@
 
 // Q4. DOM manipulation when user Setting the password, Display the strength of password......................
 
-let password = document.querySelector("#password");
-let message = document.querySelector("#strengthIndicator");
+// let password = document.querySelector("#password");
+// let message = document.querySelector("#strengthIndicator");
 
-const checkPasswordStrength = (e) => {
-  let passcode = e.target.value;
-  let specialCharacters = ["@", "#", "%", "&", "$", "*", "!"];
-  let result = false;
-  for (let char of specialCharacters) {
-    if (passcode.includes(char)) result = true;
-  }
+// const checkPasswordStrength = (e) => {
+//   let passcode = e.target.value;
+//   let specialCharacters = ["@", "#", "%", "&", "$", "*", "!"];
+//   let result = false;
+//   for (let char of specialCharacters) {
+//     if (passcode.includes(char)) result = true;
+//   }
+//   if (passcode.length > 12 && result) {
+//     return (message.innerHTML = "Very Strong Password");
+//   } else if (passcode.length > 10) {
+//     return (message.innerHTML = "Strong Password");
+//   } else {
+//     return (message.innerHTML = "Weak Password");
+//   }
+// };
 
-  if (passcode.length > 12 && result) {
-    return (message.innerHTML = "Very Strong Password");
-  } else if (passcode.length > 10) {
-    return (message.innerHTML = "Strong Password");
-  } else {
-    return (message.innerHTML = "Weak Password");
-  }
+// password.addEventListener("input", (e) => checkPasswordStrength(e));
+
+// Q5. Pollyfill of Map, Filter and Reduce Array Method...............................
+
+// Map Pollyfill................
+// const multiplyFunc = (number) => {
+//     return number * 5
+// }
+//   Object.prototype.mapPollyfill = function(callbackfunc) {
+//   const newArr = [];
+//   for (let i = 0; i < this.length; i++) {
+//     newArr.push(callbackfunc(this[i]));
+//   } 
+//   return newArr;
+// };
+
+// let myArr = [2, 4, 43, 5, 34];
+// console.log(myArr.mapPollyfill(multiplyFunc))
+// console.log(myArr.map(multiplyFunc))
+
+// Filter Pollyfill................
+
+  // const compareNumFunc = (input) => {
+  //      let passedCondition = input > 5
+  //      if (passedCondition) return input
+  // }
+
+  //   Object.prototype.filterPollyfill = function(callbackfunc) {
+  //   const newArr = [];
+  //   for (let i = 0; i < this.length; i++) { 
+  //      let output = callbackfunc(this[i]);
+  //      output && newArr.push(output)
+  //   }
+  //   return newArr;
+  // };
+  
+  // let myArr = [2, 4, 43, 5, 34];
+  // console.log(myArr.filterPollyfill(compareNumFunc))
+  // console.log(myArr.filter(compareNumFunc))
+
+  // Reduce Pollyfill................
+
+const addFunc = (x, y) => {
+    // let num = x + y
+    return x + y
+}
+  Object.prototype.mapPollyfill = function(callbackfunc) {
+  let output
+  for (let i = 0; i < this.length; i++) {
+    let num = 1+i
+    console.log(num)
+    output = callbackfunc(this[i], this[num]);
+  } 
+  return output;
 };
 
-password.addEventListener("input", (e) => checkPasswordStrength(e));
+let myArr = [2, 4, 43, 5, 34];
+console.log(myArr.mapPollyfill(addFunc))
+console.log(myArr.reduce(addFunc))
