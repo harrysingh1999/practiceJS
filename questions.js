@@ -86,57 +86,58 @@
 // Q5. Pollyfill of Map, Filter and Reduce Array Method...............................
 
 // Map Pollyfill................
-// const multiplyFunc = (number) => {
-//     return number * 5
-// }
-//   Object.prototype.mapPollyfill = function(callbackfunc) {
+
+// Object.prototype.mapPollyfill = function (callbackfunc) {
+//   if (typeof callbackfunc !== "function") {
+//     throw new TypeError("CallbackFunc is not a function");
+//   }
+
 //   const newArr = [];
 //   for (let i = 0; i < this.length; i++) {
-//     newArr.push(callbackfunc(this[i]));
-//   } 
+//     newArr.push(callbackfunc(this[i], i, this));
+//   }
 //   return newArr;
 // };
 
 // let myArr = [2, 4, 43, 5, 34];
-// console.log(myArr.mapPollyfill(multiplyFunc))
-// console.log(myArr.map(multiplyFunc))
+// console.log(myArr.mapPollyfill((ele) => ele * 3));
+// console.log(myArr.map((ele) => ele * 3));
 
 // Filter Pollyfill................
 
-  // const compareNumFunc = (input) => {
-  //      let passedCondition = input > 5
-  //      if (passedCondition) return input
-  // }
+// Object.prototype.filterPollyfill = function(callbackfunc) {
+// if (typeof callbackfunc !== 'function') {
+//   throw new TypeError('CallbackFunc is not a function');
+// }
 
-  //   Object.prototype.filterPollyfill = function(callbackfunc) {
-  //   const newArr = [];
-  //   for (let i = 0; i < this.length; i++) { 
-  //      let output = callbackfunc(this[i]);
-  //      output && newArr.push(output)
-  //   }
-  //   return newArr;
-  // };
-  
-  // let myArr = [2, 4, 43, 5, 34];
-  // console.log(myArr.filterPollyfill(compareNumFunc))
-  // console.log(myArr.filter(compareNumFunc))
+//   const newArr = [];
+//   for (let i = 0; i < this.length; i++) {
+//      let output = callbackfunc(this[i], i, this);
+//      output && newArr.push(this[i])
+//   }
+//   return newArr;
+// };
 
-  // Reduce Pollyfill................
+// let myArr = [2, 4, 43, 5, 34];
 
-const addFunc = (x, y) => {
-    // let num = x + y
-    return x + y
-}
-  Object.prototype.mapPollyfill = function(callbackfunc) {
-  let output
-  for (let i = 0; i < this.length; i++) {
-    let num = 1+i
-    console.log(num)
-    output = callbackfunc(this[i], this[num]);
-  } 
-  return output;
-};
+// console.log(myArr.filterPollyfill((item) => item < 5))
+// console.log(myArr.filter(item => item < 5 ))
 
-let myArr = [2, 4, 43, 5, 34];
-console.log(myArr.mapPollyfill(addFunc))
-console.log(myArr.reduce(addFunc))
+// Reduce Pollyfill................
+
+//   Object.prototype.reducePollyfill = function(callbackfunc, initialValue) {
+//     if (typeof callbackfunc !== 'function') {
+//       throw new TypeError('callbackfunc is not a function');
+//     }
+
+//     let accumulator = initialValue === undefined ? this[0] : initialValue;
+//     for (let i = initialValue === undefined ? 1 : 0; i < this.length; i++) {
+//       accumulator = callbackfunc(accumulator, this[i], i, this);
+//     }
+//     return accumulator;
+// };
+
+// let myArr = [2, 4, 43, 5, 34];
+
+// console.log(myArr.reducePollyfill((x,y) => x*y ))
+// console.log(myArr.reduce((x,y) => x*y ))
