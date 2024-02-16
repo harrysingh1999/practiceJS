@@ -74,10 +74,10 @@
 
 // const Throttling = (func, delay) => {
 //   let throttle = true
-//   return () => {
+//   return (e) => {
 //     if(!throttle) return
 
-//     func();
+//     func(e);
 //     throttle = false;
 //     setTimeout(() => {
 //       throttle = true;

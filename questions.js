@@ -1,14 +1,15 @@
 // Q1. Create a function to check if the data types of another function arguments is correct or not........................
 
 // function formCheck(a, b) {
-//     if (a == b) {
-//         console.log("YES")
-//     }else {
-//         console.log("NO")
-//     }
+//     // if (a.toUpperCase() === b.toUpperCase()) {
+//     //     console.log("YES, user is using the correct Data Type when calling the function")
+//     // }else {
+//     //     console.log("NO, user is not using the correct Data Type when calling the function ")
+//     // }
+//     console.log(`YES, user is using the correct Data Type of arguments when calling the function, Arguments: ${a} ${b}`)
 // }
 
-// let strings = ['Harry', 'Harry']
+// let inputs = ['Harry', 'dre' ]
 
 // function checkParams (str, func) {
 //     if (typeof str[0] === 'string' && typeof str[1] === 'string') {
@@ -18,7 +19,7 @@
 //     }
 // }
 
-// checkParams(strings, formCheck)
+// checkParams(inputs, formCheck)
 
 // Q2. Where you need to print no. using Loop. Without Closure and IIFE it's not recommendable........
 
@@ -141,3 +142,84 @@
 
 // console.log(myArr.reducePollyfill((x,y) => x*y ))
 // console.log(myArr.reduce((x,y) => x*y ))
+
+// Q4. 
+/*
+const cricket = [
+    {player: 1, score: 50, day: 1},
+    {player: 1, score: 150, day: 1},
+    {player: 2, score: 75, day: 3},
+    {player: 5, score: 75, day: 3},
+    {player: 7, score: 30, day: 1},
+    {player: 5, score: 20, day: 3},
+    {player: 1, score: 10, day: 2},
+]
+
+let ans = {};
+cricket.forEach((currEl) => {
+    if(ans[currEl.day]) {
+        if(ans[currEl.day][currEl.player]) {
+            ans[currEl.day][currEl.player] += currEl.score;
+        } else {
+            ans[currEl.day][currEl.player] = currEl.score;
+        }
+    } else {
+        ans[currEl.day] = {};
+        ans[currEl.day][currEl.player] = currEl.score;
+    }
+})
+
+Object.keys(ans).forEach(dayEl => {
+    Object.keys(ans[dayEl]).forEach(playerEl => {
+        console.log(`Day: ${dayEl} of player: ${playerEl} of total score ${ans[dayEl][playerEl]}`);
+    })
+})
+*/
+
+// Q6. Make a Unique element array out of an Array with Multiple repeated elements..............
+// const inpArr = [6,3,1,9,4,6,2,8,9,1,5,6,9];
+
+// let count = {}
+// let uniqueArr
+// inpArr.map(item => {
+//     count[item] =  count[item] ? count[item] + 1 : 1
+    
+//     let keysArr = Object.keys(count)
+//     uniqueArr = data
+// })
+
+// console.log(uniqueArr)
+
+// Q6. Find out the Most repeated Element from an Array..............
+
+// const arr = [32, 3243, 6546, 332, 22, 433, 22, 32, 22, 32, 22]
+
+// let count = {}
+// let mostRepeatedElement
+// arr.map(item => {
+//     count[item] =  count[item] ? count[item] + 1 : 1
+    
+//     let keysArr = Object.keys(count)
+//         let result = keysArr.reduce((acc, curr) => {
+//         if (count[acc] > count[curr]) {
+//             return acc
+//         }
+//         else {
+//             return curr
+//         }
+//     })
+//     mostRepeatedElement = result 
+// })
+
+// console.log(mostRepeatedElement)
+
+
+// Q8. Reverse a String...................
+
+let str = 'Harvinder'
+let newStr = ""
+ for(let i=1; i<=str.length; i++) {
+     newStr += str[str.length - i]
+ }
+ console.log(newStr)
+
