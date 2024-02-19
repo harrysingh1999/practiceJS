@@ -217,9 +217,34 @@ Object.keys(ans).forEach(dayEl => {
 // Q8. Reverse a String...................
 
 let str = 'Harvinder'
-let newStr = ""
- for(let i=1; i<=str.length; i++) {
-     newStr += str[str.length - i]
+for(let i=1; i<=str.length; i++) {
+    //  str = ""
+     str[str.length - i]
  }
- console.log(newStr)
+console.log(str)    
+ 
+// Q9. Check if a String is palindrome...................
 
+// let str = 'harvinder'
+// let newStr = ""
+//  for(let i=1; i<=str.length; i++) {
+//      newStr += str[str.length - i]
+//  }
+
+//  console.log(newStr)
+// const checkPalindrome = (input) => {
+//     let result
+//    for (let j = 0; j < input.length; j++) {
+//     // console.log(input[input.length - j+1])
+//     // console.log(newStr[j])
+//        if (input[input.length-j+1] === newStr[j] ) {
+//            result = true
+//         }else{
+//             result = false
+//     }
+//    }
+
+//    return result
+// }
+
+// console.log(checkPalindrome(str))
