@@ -197,7 +197,7 @@ Object.keys(ans).forEach(dayEl => {
 // let count = {}
 // let mostRepeatedElement
 // arr.map(item => {
-//     count[item] =  count[item] ? count[item] + 1 : 1
+//     count[item] =  count[item] ? count[item] + 1 : 1 
     
 //     let keysArr = Object.keys(count)
 //         let result = keysArr.reduce((acc, curr) => {
@@ -216,12 +216,12 @@ Object.keys(ans).forEach(dayEl => {
 
 // Q8. Reverse a String...................
 
-let str = 'Harvinder'
-for(let i=1; i<=str.length; i++) {
-    //  str = ""
-     str[str.length - i]
- }
-console.log(str)    
+// let str = 'Harvinder'
+// for(let i=1; i<=str.length; i++) {
+//     //  str = ""
+//      str = str[str.length - i]
+//  }
+// console.log(str)    
  
 // Q9. Check if a String is palindrome...................
 
