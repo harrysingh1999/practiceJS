@@ -7,9 +7,9 @@
 //   let secondLargestNum = array[0];
 
 //   for (let i = 0; i < array.length; i++) {
-//     if (array[i] > largestNum) { 
-//       secondLargestNum = largestNum; 
-//       largestNum = array[i];  
+//     if (array[i] > largestNum) {
+//       secondLargestNum = largestNum;
+//       largestNum = array[i];
 //     } else if (array[i] > secondLargestNum && array[i] !== largestNum ) {
 //       secondLargestNum = array[i];
 //     }
@@ -40,3 +40,23 @@
 // }
 
 // console.log(findSecondLowestNum(arr));
+
+// Promise.all()..........................
+
+// const jsonPlaceholderURL = "https://jsonplaceholder.typicode.com/posts/1";
+// const catFactsURL = "https://cat-fact.herokuapp.com/facts/random?amount=1";
+
+// // Function to fetch data from a single endpoint
+// const fetchData = async (url) => {
+//   const response = await fetch(url);
+//   return response.json();
+// };
+
+// Promise.all([fetchData(jsonPlaceholderURL), fetchData(catFactsURL)])
+//   .then((output) => console.log("Data from JSONPlaceholder API and Cat Facts API:", output))
+//   .catch((error) => console.error("Error fetching data:", error));
+
+// Promise.allSettled()..........................
+// Promise.allSettled([fetchData(jsonPlaceholderURL), fetchData(catFactsURL)])
+//   .then((output) => console.log("Data from JSONPlaceholder API and Cat Facts API:", output))
+//   .catch((error) => console.error("Error fetching data:", error));
