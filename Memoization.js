@@ -1,35 +1,36 @@
 // Memoization.................................
 
-// let multiple = 1
-// const multiply = (n) => {
-//     for (let i = 1; i <= n; i++) {
-//           multiple = i*multiple      
-//     }
-//     return multiple
-// }
+function factorial(n) {
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result = result * i;
+  }
+  return result;
+}
 
-// const memoization = (func) => {
-//     let cache = {}
-//     return (num) => {
-//         if(cache[num]) {
-//             console.log('Getting Data from Cache')
-//             return cache[num]
-//         } else {
-//              console.log('Calculating new Data')   
-//              const result = func(num) 
-//              cache[num] = result
-//              return result
-//         }
-//     }
-// }
+const memoization = (func) => {
+  let cache = {};
+  console.log(cache);
 
-// const memoizedFunction = memoization(multiply)
+  return (num) => {
+    if (cache[num]) {
+      console.log("Retrieving Data from Cache");
+      return cache[num];
+    } else {
+      console.log("Calculating data again");
+      let result = func(num);
+      cache[num] = result;
+      return result;
+    }
+  };
+};
 
-// console.time()
-// console.log(memoizedFunction(5))
-// console.timeEnd()
+const memoizedFunction = memoization(factorial);
 
-// console.time()
-// console.log(memoizedFunction(5))
-// console.timeEnd()
+console.time();
+console.log(memoizedFunction(10));
+console.timeEnd();
 
+// console.time();
+// console.log(memoizedFunction(103));
+// console.timeEnd();
