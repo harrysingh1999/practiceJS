@@ -1,15 +1,15 @@
 // Q1. Create a function to check if the data types of another function arguments is correct or not........................
 
 // function formCheck(a, b) {
-//     // if (a.toUpperCase() === b.toUpperCase()) {
-//     //     console.log("YES, user is using the correct Data Type when calling the function")
-//     // }else {
-//     //     console.log("NO, user is not using the correct Data Type when calling the function ")
-//     // }
+//     if (a.toUpperCase() === b.toUpperCase()) {
+//         console.log("YES, user is using the correct Data Type when calling the function")
+//     }else {
+//         console.log("NO, user is not using the correct Data Type when calling the function ")
+//     }
 //     console.log(`YES, user is using the correct Data Type of arguments when calling the function, Arguments: ${a} ${b}`)
 // }
 
-// let inputs = ['Harry', 'dre' ]
+// let inputs = ['Harry', 'ffv' ]
 
 // function checkParams (str, func) {
 //     if (typeof str[0] === 'string' && typeof str[1] === 'string') {
@@ -21,7 +21,7 @@
 
 // checkParams(inputs, formCheck)
 
-// Q2. Where you need to print no. using Loop. Without Closure and IIFE it's not recommendable........
+// Q2. Where you need to print no. using Loop.........
 
 // Bad Way and applicable to all JS Environments................
 // for (let index = 0; index <= 5; index++) {
@@ -32,11 +32,9 @@
 
 //  Correct Way..........................
 // for (let index = 0; index <= 5; index++) {
-//   (function(index){
-//         setTimeout(() => {
-//              console.log(index)
-//         }, 1000);
-//     })(index)
+//   setTimeout(() => {
+//     console.log(index);
+//   }, index * 1000);
 // }
 
 // Q3. Analyze the given output and provide the same output by using given variables.................
@@ -143,7 +141,7 @@
 // console.log(myArr.reducePollyfill((x,y) => x*y ))
 // console.log(myArr.reduce((x,y) => x*y ))
 
-// Q4. 
+// Q4.
 /*
 const cricket = [
     {player: 1, score: 50, day: 1},
@@ -183,7 +181,7 @@ Object.keys(ans).forEach(dayEl => {
 // let uniqueArr
 // inpArr.map(item => {
 //     count[item] =  count[item] ? count[item] + 1 : 1
-    
+
 //     let keysArr = Object.keys(count)
 //     uniqueArr = data
 // })
@@ -197,8 +195,8 @@ Object.keys(ans).forEach(dayEl => {
 // let count = {}
 // let mostRepeatedElement
 // arr.map(item => {
-//     count[item] =  count[item] ? count[item] + 1 : 1 
-    
+//     count[item] =  count[item] ? count[item] + 1 : 1
+
 //     let keysArr = Object.keys(count)
 //         let result = keysArr.reduce((acc, curr) => {
 //         if (count[acc] > count[curr]) {
@@ -208,11 +206,10 @@ Object.keys(ans).forEach(dayEl => {
 //             return curr
 //         }
 //     })
-//     mostRepeatedElement = result 
+//     mostRepeatedElement = result
 // })
 
 // console.log(mostRepeatedElement)
-
 
 // Q8. Reverse a String...................
 
@@ -221,8 +218,8 @@ Object.keys(ans).forEach(dayEl => {
 //     //  str = ""
 //      str = str[str.length - i]
 //  }
-// console.log(str)    
- 
+// console.log(str)
+
 // Q9. Check if a String is palindrome...................
 
 // let str = 'harvinder'
