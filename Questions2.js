@@ -63,13 +63,14 @@
 
 // Fibonacci Series..............
 
-const createFibonacciSeries = (num) => {
-  const fibonaciSeries = [0, 1];
+// const createFibonacciSeries = (num) => {
+//   const fibonaciSeries = [0, 1];
 
-  for (let i = 2; i < num; i++) {
-    fibonaciSeries[i] = fibonaciSeries[i - 1] + fibonaciSeries[i - 2];
-  }
-  return fibonaciSeries;
-};
+//   for (let i = 2; i < num; i++) {
+//     fibonaciSeries[i] = fibonaciSeries[i - 1] + fibonaciSeries[i - 2];
+//   }
+//   return fibonaciSeries;
+// };
 
-console.log(createFibonacciSeries(6));
+// console.log(createFibonacciSeries(10));
+
